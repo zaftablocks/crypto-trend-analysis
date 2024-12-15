@@ -15,3 +15,22 @@ new TradingView.widget({
     hotlist: true,
     calendar: true,
 });
+document.getElementById('coin').addEventListener('change', function() {
+    const symbol = this.value;
+    new TradingView.widget({
+        container_id: "chart",
+        width: "100%",
+        height: 500,
+        symbol: symbol,
+        interval: "D",
+        timezone: "Etc/UTC",
+        theme: "light",
+        style: "1",
+        locale: "en",
+        enable_publishing: false,
+        allow_symbol_change: true,
+        details: true,
+        hotlist: true,
+        calendar: true,
+    });
+});
